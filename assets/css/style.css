@@ -2,3 +2,71 @@
   margin: 0;
   padding: 0;
 }
+
+body, html {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient( transparent, purple);
+  background-color: #000;
+  color: #fff;
+  font-size: 26px;
+  padding: 20% 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+body::after {
+  background-image: url('../img/bg1.jpg');
+  background-repeat: no-repeat;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Title */
+.title {
+  font-family: 'Playball';
+  font-size: 62px;
+  padding: 1em;
+  text-shadow: 3px 3px 5px #000;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Count */
+.count {
+  display: table;
+  font-family: 'Montserrat';
+  font-size: 22px;
+  margin: auto;
+  line-height: 25px;
+  letter-spacing: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 25px #000;
+  position: relative;
+  z-index: 2;
+}
+
+.count__day--num {
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 5% 0;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+}
